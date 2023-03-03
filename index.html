@@ -16,11 +16,11 @@
             <a href="#"> <img class="header__logo" src="./src/svg/logo.svg" alt="logotype"> </a>
             
             <nav class="header__nav">
-                <a href="#"> Home </a>
-                <a href="#"> About Us </a>
-                <a href="#"> Projects </a>
-                <a href="#"> Services </a>
-                <a href="#"> Contact Us </a>
+                <a class="header__link" href="main"> Home </a>
+                <a class="header__link" href="aboutUs" > About Us </a>
+                <a class="header__link" href="stats" > Projects </a>
+                <a class="header__link" href="services" > Services </a>
+                <a class="header__link" href="cta" > Contact Us </a>
             </nav>
             <span class="header__burger" onclick="openMenu()"></span>
         </div>
@@ -36,8 +36,8 @@
                         <p class="switch__text"> The National University of Architecture </p>
                     </div>
                     <div class="switch__control"> 
-                        <div class="control" onClick="prevSlide()"> Back </div>
-                        <div class="control" onClick="nextSlide()"> Next </div>
+                        <div class="control" onClick="changeSlide('prev')"> Back </div>
+                        <div class="control" onClick="changeSlide('next')"> Next </div>
                     </div>
 
                 </div>
