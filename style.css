@@ -184,7 +184,7 @@ a {
 
 
 .hero {
-    background-image: url('/src/img/hero_bg.jpg');
+    background-image: url('./src/img/hero_bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

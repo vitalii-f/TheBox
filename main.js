@@ -7,10 +7,10 @@ function openMenu() {
 }
 
 var slider_bg = [
-    '/src/img/hero_bg.jpg',
-    '/src/img/hero_bg_1.webp',
-    '/src/img/hero_bg_2.webp',
-    '/src/img/hero_bg_3.webp',
+    './src/img/hero_bg.jpg',
+    './src/img/hero_bg_1.webp',
+    './src/img/hero_bg_2.webp',
+    './src/img/hero_bg_3.webp',
 ]
 
 var slider = document.getElementsByClassName('hero');
