@@ -572,11 +572,13 @@ section {
         flex-direction: column;
         gap: 40px 0;
     }
-    .stats__cards {
-        
-    }
     .stats__card img {
         display: none;
+    }
+
+    .stats__card p {
+        font-size: 1.3rem;
+        line-height: normal;
     }
 }
 
@@ -595,12 +597,12 @@ section {
     }
 
     .stats__card h2 {
-        font-size: 4rem;
+        font-size: 3.5rem;
         line-height: normal;
     }
     
     .stats__card p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         line-height: normal;
     }
 }
