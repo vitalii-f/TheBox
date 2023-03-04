@@ -825,9 +825,6 @@ a {
     row-gap: 32px;
 }
 
-.wrapper_default {
-}
-
 .projects__filter {
     grid-column: 1/4;
     display: flex;
@@ -940,6 +937,36 @@ a {
 
 .active_indicator {
     background: var(--color-primary);
+}
+
+@media (max-width: 1200px) {
+    .projects__wrapper {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .projects__filter {
+        display: grid;
+        justify-content: left;
+        flex-direction: row;
+        gap: 0 20px;
+        align-items: center;
+    }
+
+    .filter__title {
+        grid-row: 1/2;
+        grid-column: span 2;
+    }
+
+    .filter__category {
+        grid-row: 2/3;
+    }
+
+    .projects__items {
+        justify-content: center;
+    }
+
 }
 
 .cta {
