@@ -17,10 +17,10 @@
             
             <nav class="header__nav">
                 <a class="header__link" href="main"> Home </a>
-                <a class="header__link" href="aboutUs" > About Us </a>
-                <a class="header__link" href="stats" > Projects </a>
-                <a class="header__link" href="services" > Services </a>
-                <a class="header__link" href="cta" > Contact Us </a>
+                <a class="header__link" href="aboutUs"> About Us </a>
+                <a class="header__link" href="projects"> Projects </a>
+                <a class="header__link" href="services"> Services </a>
+                <a class="header__link" href="cta"> Contact Us </a>
             </nav>
             <span class="header__burger" onclick="openMenu()"></span>
         </div>
@@ -164,7 +164,7 @@
                     <p class="filter__category"> Other </p>
                 </div>
                 <div class="projects__items">
-                    <div class="project__item">
+                    <!-- <div class="project__item">
                         <img class="project__img" src="./src/img/project_bg_1.png" alt="Project image">
                         <div class="project__description">
                             <h3> Wildstone Infra Hotel </h3>
@@ -191,21 +191,22 @@
                             <h3> Oregano Height </h3>
                             <p> 2464 Royal Ln. Mesa, New Jersey </p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="projects__navigation">
-                    <div class="navigation__button">
+                    <div class="navigation__button" onclick="changeProjectList('prev')">
                         <img src="./src/svg/arrow_left.svg" alt="arrow left">
                         Back
                     </div>
-                    <span class="navigation__indicator active_indicator"></span>
-                    <span class="navigation__indicator"></span>
-                    <span class="navigation__indicator"></span>
-                    <span class="navigation__indicator"></span>
-                    <div class="navigation__button">
+                    <div class="navigation__button" onclick="changeProjectList('next')">
                         Next
                         <img src="./src/svg/arrow_right.svg" alt="arrow right">
                     </div>
+                    <!-- <span class="navigation__indicator"></span>
+                    <span class="navigation__indicator"></span>
+                    <span class="navigation__indicator"></span>
+                    <span class="navigation__indicator"></span> -->
+                    
                 </div>
             </div>
         </section>

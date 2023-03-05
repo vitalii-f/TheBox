@@ -849,6 +849,7 @@ a {
     font-size: 24px;
     line-height: 28px;
     color: var(--color-neutral-200);
+    cursor: pointer;
 }
 
 .active_category {
@@ -857,16 +858,31 @@ a {
 }
 
 .projects__items {
+    /* height: 600px; */
     grid-column: 5/13;
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
+
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+}
+
+.projects__items::-webkit-scrollbar {
+    display: none;
 }
 
 .project__item {
     width: 370px;
     display: flex;
     flex-direction: column;
+}
+
+.project__img {
+    max-height: 240px;
+    object-fit: cover;
 }
 
 .project__description {
@@ -921,10 +937,15 @@ a {
     color: var(--color-neutral-white);
 }
 
+.navigation__button:nth-child(1) {
+    order: -2;
+}
+
 .navigation__indicator {
     display: flex;
     flex-shrink: 0;
     align-self: center;
+    order: -1;
     width: 16px;
     height: 16px;
     background: var(--color-neutral-50);
