@@ -38,8 +38,10 @@ a {
 .header__wrapper {
     justify-content: space-between;
     align-items: center;
-    
-    /* padding: 10px 0; */
+}
+
+.header__logo {
+    max-width: unset;
 }
 
 .header__nav {
@@ -181,7 +183,6 @@ a {
         -o-transition: all 0.5s;
 }
 }
-
 
 .hero {
     background-image: url('./src/img/hero_bg.jpg');
@@ -1024,7 +1025,7 @@ a {
     line-height: 23px;
     text-align: center;
     color: var(--color-neutral-800);
-   
+    margin-bottom: 38px;
 }
 
 .cta__form {
@@ -1037,6 +1038,7 @@ a {
 }
 
 .cta__input {
+    position: relative;
     height: 40px;
     width: 47%;
     background: var(--color-neutral-white);
