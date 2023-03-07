@@ -1,24 +1,5 @@
 "use strict";
 
-function openMenu() {
-    const header_nav = document.getElementsByClassName('header__nav');
-    header_nav[0].classList.toggle('nav__opened');
-
-    const header_burger = document.getElementsByClassName('header__burger');
-    header_burger[0].classList.toggle('burger__change');   
-}
-
-const slider_bg = [
-    './src/img/hero_bg.jpg',
-    './src/img/hero_bg_1.webp',
-    './src/img/hero_bg_2.webp',
-    './src/img/hero_bg_3.webp',
-]
-
-const slider = document.getElementsByClassName("hero");
-let currentSlide = 0; // current slide of "hero" section
-
-
 let isActive = document.getElementsByClassName("active_category")[0]; // active filter
 const maxItems = 4; //max items on page
 let filteredItemsCount = 0;
@@ -29,79 +10,79 @@ const projectList = [
     {
         name : "Wildstone Infra Hotel",
         description: "2715 Ash Dr. San Jose, South Dakota",
-        image: "./src/img/project_bg_1.png",
+        image: "./src/img/project_bg_1.webp",
         attribute: "commercial"
     },
     {
         name : "Wish Stone Building",
         description: "2972 Westheimer Rd. Santa Ana, Illinois",
-        image: "./src/img/project_bg_2.png",
+        image: "./src/img/project_bg_2.webp",
         attribute: "residential"
     },
     {
         name : "Mr. Parkinston’s House",
         description: "3517 W. Gray St. Utica, Pennsylvania",
-        image: "./src/img/project_bg_3.png",
+        image: "./src/img/project_bg_3.webp",
         attribute: "other"
     },
     {
         name : "Oregano Height 1",
         description: "2464 Royal Ln. Mesa, New Jersey",
-        image: "./src/img/project_bg_4.png",
+        image: "./src/img/project_bg_4.webp",
         attribute: "commercial"
     },
     {
         name : "Oregano Height 2",
         description: "2464 Royal Ln. Mesa, New Jersey",
-        image: "./src/img/project_bg_4.png",
+        image: "./src/img/project_bg_4.webp",
         attribute: "residential"
     },
     {
         name : "Oregano Height 3",
         description: "2464 Royal Ln. Mesa, New Jersey",
-        image: "./src/img/project_bg.png",
+        image: "./src/img/project_bg.webp",
         attribute: "other"
     },
     {
         name : "Oregano Height 4",
         description: "2464 Royal Ln. Mesa, New Jersey",
-        image: "./src/img/project_bg.png",
+        image: "./src/img/project_bg.webp",
         attribute: "other"
     },
     {
         name : "Oregano Height 5",
         description: "2464 Royal Ln. Mesa, New Jersey",
-        image: "./src/img/project_bg.png",
+        image: "./src/img/project_bg.webp",
         attribute: "other"
     },
     {
         name : "Oregano Height 5",
         description: "2464 Royal Ln. Mesa, New Jersey",
-        image: "./src/img/project_bg.png",
+        image: "./src/img/project_bg.webp",
         attribute: "other"
     },
     {
         name : "Oregano Height 5",
         description: "2464 Royal Ln. Mesa, New Jersey",
-        image: "./src/img/project_bg.png",
+        image: "./src/img/project_bg.webp",
         attribute: "other"
     },
     {
         name : "Oregano Height 5",
         description: "2464 Royal Ln. Mesa, New Jersey",
-        image: "./src/img/project_bg.png",
+        image: "./src/img/project_bg.webp",
         attribute: "other"
     },
     {
         name : "Oregano Height 7",
         description: "2464 Royal Ln. Mesa, New Jersey",
-        image: "./src/img/project_bg.png",
+        image: "./src/img/project_bg.webp",
         attribute: "other"
     },
     {
         name : "Oregano Height 5",
         description: "2464 Royal Ln. Mesa, New Jersey",
-        image: "./src/img/project_bg.png",
+        image: "./src/img/project_bg.webp",
         attribute: "other"
     },
 ]
@@ -231,33 +212,4 @@ function changeProjectList(direction) {
         console.log("Nav " + navIndicator[0]);
         navIndicator[currentProjectList].classList.add("active_indicator");
     }
-}
-
-function changeSlide(direction) {
-    if (direction == "prev") {
-        if (currentSlide !== 0) {
-            currentSlide--;
-        }
-    }
-
-    if (direction == "next") {
-        if (currentSlide !== slider_bg.length - 1) {
-            currentSlide++;
-        }
-    }
-    
-    slider[0].style.backgroundImage = 'url(' + slider_bg[currentSlide] + ')';
-}
-
-const links = document.getElementsByClassName("header__link");
-
-for (let link of links) { 
-    link.addEventListener("click", function (e) {
-        e.preventDefault();
-        const anchor = link.getAttribute("href");
-        document.getElementsByClassName(anchor)[0].scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-    });
 }
